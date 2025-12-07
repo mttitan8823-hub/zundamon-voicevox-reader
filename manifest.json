@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "ずんだもん読み上げ拡張機能 (VOICVOX)",
+  "version": "3.0.0",  /* ★修正点: バージョンを整数表記に変更 (3.0 -> 3.0.0) ★ */
+  "description": "Braveで選択したテキストをVOICVOXのずんだもん音声で読み上げます（設定機能付き）。",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "offscreen",
+    "storage" 
+  ],
+  "action": {           /* ★新規追加: ツールバークリック時の設定 ★ */
+    "default_popup": "popup.html"
+  },
+  "options_ui": {       /* ★オプションページは維持するが、メインはポップアップにする★ */
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "host_permissions": [
+    "http://127.0.0.1:50021/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
