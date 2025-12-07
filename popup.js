@@ -17,6 +17,7 @@ const saveSetting = () => {
   const speed = parseFloat(document.getElementById('speed').value);
   const volume = parseFloat(document.getElementById('volume').value);
 
+  // ここで保存することで、スライダーを動かした瞬間にバックグラウンドの読み上げ設定に反映されます。
   chrome.storage.local.set({
     speed: speed,
     volume: volume
